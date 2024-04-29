@@ -22,9 +22,9 @@ const Home = () => {
             return (
               <div 
                 key={product.id}
-                className='w-full h-[300px] bg-slate-200' 
+                className='w-full' 
               >             
-                <Product key={product.id} />           
+                <Product product={product} key={product.id} />           
               </div>
             )
           }))}
