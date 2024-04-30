@@ -1,6 +1,8 @@
 import React, { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import { BsPlus, BsEyeFill } from 'react-icons/bs'
+// add cart context
+import { CartContext } from '../contexts/CartContext'
 
 const Product = ({ product }) => {
   // destructure product
