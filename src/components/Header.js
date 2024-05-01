@@ -10,18 +10,18 @@ const Header = () => {
   const { isOpen, setIsOpen } = useContext(SidebarContext)
 
   return (
-    <header className='bg-slate-100 h-16 flex items-center text-center px-4'>
+    <header className='w-full fixed z-10 opacity-95 bg-slate-100 h-16 flex items-center text-center px-4'>
       <nav className='w-full max-w-7xl flex items-center justify-between mx-auto'>
       <Link to="/">
         <img
-          className='w-10' 
+          className='w-10 opacity-100' 
           src={ligoImg} 
           alt='logo' 
         />
       </Link>
       <div 
         onClick={() => setIsOpen(!isOpen)} 
-        className='cursor-pointer flex relative'
+        className='cursor-pointer flex relative opacity-100'
       >
         <BsBag size={24} />
       </div>
