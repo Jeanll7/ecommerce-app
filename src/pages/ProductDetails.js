@@ -1,7 +1,11 @@
-import React from 'react';
+import React from "react";
 
 const ProductDetails = () => {
-  return <div>Product Details Page</div>;
+  return (
+    <div className="mt-20">
+      Product Details Page
+    </div>
+  )
 };
 
 export default ProductDetails;
