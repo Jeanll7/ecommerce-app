@@ -19,10 +19,10 @@ const ProductProvider = ({children}) => {
         console.error(error);
       }
     };
-
+    
     fetchProducts();
   }, []);
-
+  
   return (
     <ProductContext.Provider value={{ products }}>
       {children}
