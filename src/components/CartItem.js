@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import {  HiOutlineTrash  } from 'react-icons/hi2'
 import {  IoMdAdd, IoMdRemove  } from 'react-icons/io'
+import { CartContext } from '../contexts/CartContext'
 
 const CartItem = ({ item }) => {
+  const { removeFromCart } = useContext(CartContext)
   // destructure item
   const { id, title, image, price, amount } = item;
   return (
@@ -23,7 +25,7 @@ const CartItem = ({ item }) => {
               {title}
             </Link>
             {/* remove icon  */}
-            <div className="text-xl cursor-pointer">
+            <div onClick={() => removeFromCart(id)} className="text-xl cursor-pointer">
               <HiOutlineTrash size={24} className="text-gray-600 hover:text-red-500 transition" />
             </div>
           </div>
