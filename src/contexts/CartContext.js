@@ -1,4 +1,4 @@
-import React, { createContext, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 //create context
 export const CartContext = createContext();
@@ -6,6 +6,14 @@ export const CartContext = createContext();
 const CartProvider = ({ children }) => {
   // cart state
   const [cart, setCart] = useState([]);
+  // valor do total
+  const [itemAmount, setItemAmount] = useState(0)
+
+  // atualizar valor
+  useEffect(() => {
+
+  }, [])
+
   // add to cart
   const addToCart = (product, id) => {
     const newItem = { ...product, amount: 1 };
@@ -64,20 +72,6 @@ const CartProvider = ({ children }) => {
     }
   };
 
-  // const decreaseAmount = (id) => {
-  //   const updatedCart = cart.map(item => {
-  //     if (item.id === id) {
-  //       if (item.amount > 1) {
-  //         return { ...item, amount: item.amount - 1 };
-  //       } else {
-  //         return null;
-  //       }
-  //     }
-  //     return item;
-  //   }).filter(item => item !== null);
-  //   setCart(updatedCart);
-  // };
-
   return (
     <CartContext.Provider
       value={{
@@ -87,6 +81,7 @@ const CartProvider = ({ children }) => {
         clearCart,
         increaseAmount,
         decreaseAmount,
+        itemAmount,
       }}
     >
       {children}
