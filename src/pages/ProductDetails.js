@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useContext } from "react";
+
+import { useParams } from "react-router-dom";
 
 const ProductDetails = () => {
   return (
-    <div className="mt-20">
+    <div className="">
       Product Details Page
     </div>
   )
