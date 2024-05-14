@@ -32,7 +32,7 @@ const Sidebar = () => {
         </div>
       </div>
 
-      <div className="flex flex-col gap-y-2 h-[510px] lg:h-[540px] overflow-y-auto overflow-x-hidden border-b">
+      <div className="flex flex-col gap-y-2 h-[480px] lg:h-[540px] overflow-y-auto overflow-x-hidden border-b">
         {cart.map((item) => {
           return <CartItem item={item} key={item.id} />;
         })}
@@ -46,7 +46,7 @@ const Sidebar = () => {
           {/* clear cart */}
           <div
             onClick={clearCart}
-            className="cursor-pointer py-4 bg-red-500 text-white w-12 h-12 flex justify-center items-center rounded-sm"
+            className="cursor-pointer py-4 bg-red-500 text-white w-10 h-10 flex justify-center items-center rounded-sm"
           >
             <FiTrash2 size={20} />
           </div>
