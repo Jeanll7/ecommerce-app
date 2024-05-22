@@ -5,7 +5,6 @@ import { CartContext } from "../contexts/CartContext";
 import { ProductContext } from "../contexts/ProductContext";
 
 const ProductDetails = () => {
-  // get the product id from the url
   const { id } = useParams();
   const { products } = useContext(ProductContext);
   const { addToCart } = useContext(CartContext);

@@ -1,6 +1,5 @@
 import React, { useContext } from "react";
 import { Link } from "react-router-dom";
-import {  HiOutlineTrash  } from 'react-icons/hi2'
 import {  IoMdAdd, IoMdRemove  } from 'react-icons/io'
 import { AiOutlineClose } from "react-icons/ai";
 import { CartContext } from '../contexts/CartContext'
